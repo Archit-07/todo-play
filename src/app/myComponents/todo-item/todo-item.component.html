@@ -1,0 +1,25 @@
+<div class="my-3">
+  <h4>
+    <span
+      [ngClass]="{ strike: !todo.active }"
+      class="badge bg-info text-dark"
+      >{{ todo.title }}</span
+    >
+  </h4>
+  <p class="alert alert-warning text-justify" role="alert">
+    {{ todo.desc }}
+  </p>
+  <div class="col-12">
+    <div class="form-check text-primary">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="gridCheck"
+        (click)="onCheckBox(todo)"
+        [checked]="!todo.active"
+      />
+      <label class="form-check-label" for="gridCheck"> Mark As Done </label>
+    </div>
+    <button class="btn btn-danger" (click)="onClick(todo)">delete</button>
+  </div>
+</div>

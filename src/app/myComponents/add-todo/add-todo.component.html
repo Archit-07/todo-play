@@ -1,0 +1,43 @@
+<div class="text-center">
+  <h2
+    class="text-center font-weight-bold text-primary alert alert-success"
+    role="alert"
+  >
+    Add a Todo
+  </h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="row mb-3">
+      <label for="title" class="col-sm-2 col-form-label"
+        ><h3>
+          <span class="badge bg-light text-success">Title :</span>
+        </h3></label
+      >
+      <div class="col-sm-10">
+        <input
+          type="text"
+          [(ngModel)]="title"
+          class="form-control"
+          name="title"
+          id="title"
+        />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="desc" class="col-sm-2 col-form-label"
+        ><h3>
+          <span class="badge bg-light text-success">Description :</span>
+        </h3></label
+      >
+      <div class="col-sm-10">
+        <input
+          type="text"
+          [(ngModel)]="desc"
+          class="form-control"
+          name="desc"
+          id="desc"
+        />
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Add todo</button>
+  </form>
+</div>
